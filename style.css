@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+}
+
+body {
+  color: var(--gray-950);
+  background-color: var(--yellow);
+  min-height: 100vh;
+  font-family: "Figtree", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 384px;
+  background-color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--gray-950);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 8px 8px 0px 0px #000;
+}
+
+.blog-image {
+  width: 336px;
+  height: 200px;
+}
+
+.blog-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  margin: 24px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.category {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--yellow);
+}
+
+.category p {
+  font-weight: 800;
+}
+
+h1 {
+  line-height: 36px;
+  font-size: 24px;
+  font-weight: 800;
+  cursor: url(./assets/images/Black\ Hand\ Cursor.cur), auto;
+}
+
+h1:hover,
+h1:active {
+  color: var(--yellow);
+}
+
+.text {
+  color: var(--gray-500);
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-name {
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 440px) {
+  body {
+    padding: 0 24px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 24px;
+    margin: 156px 24px;
+  }
+
+  .blog-image {
+    width: 100%;
+  }
+
+  .attribution {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  body {
+    padding: 24px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 540px;
+    padding: 24px;
+    margin: 32px auto;
+  }
+
+  .blog-image {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  .text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .attribution {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 24px;
+  }
+  .container {
+    max-width: 720px;
+  }
+}
